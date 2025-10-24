@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Event Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Campus Event Registration Platform</h1>
+    </header>
+
+    <nav style="text-align: center; padding: 0.5rem; background: #eee">
+      <a href="index.html">Home (Public)</a> |
+      <a href="admin.html">Admin Panel</a>
+    </nav>
+
+    <main>
+      <section id="events-section">
+        <h2>Available Events</h2>
+        <div id="events-list">
+          <p>Loading events...</p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="registration-section">
+        <h2>Register for an Event</h2>
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="event_id">Select Event:</label>
+            <select id="event_id" name="event_id" required>
+              <option value="">-- Please select an event --</option>
+            </select>
+          </div>
+          <button type="submit">Register</button>
+        </form>
+        <p id="form-message" class="message"></p>
+      </section>
+    </main>
+
+    <div id="event-detail-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <span class="modal-close-button">&times;</span>
+        <h2 id="modal-title">Event Title</h2>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

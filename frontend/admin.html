@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+
+    <nav style="text-align: center; padding: 0.5rem; background: #eee">
+      <a href="index.html">Home (Public)</a> |
+      <a href="admin.html">Admin Panel</a>
+    </nav>
+
+    <main>
+      <section id="login-section">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value="admin"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value="adminpass"
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p id="login-message" class="message"></p>
+      </section>
+
+      <section id="admin-panel" class="hidden">
+        <div id="admin-header">
+          <h3>Selamat datang, <span id="admin-name"></span>!</h3>
+          <button id="logout-button">Logout</button>
+        </div>
+
+        <hr />
+
+        <h2 id="form-title">Create New Event</h2>
+        <form id="event-form">
+          <input type="hidden" id="event-id" name="event-id" />
+
+          <div class="form-group">
+            <label for="title">Event Title:</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required />
+          </div>
+          <div class="form-group">
+            <label for="quota">Quota:</label>
+            <input type="number" id="quota" name="quota" required />
+          </div>
+          <button type="submit" id="submit-event-button">Create Event</button>
+          <button
+            type="button"
+            id="cancel-update-button"
+            class="hidden"
+            style="background-color: #777"
+          >
+            Cancel Update
+          </button>
+        </form>
+        <p id="admin-message" class="message"></p>
+
+        <hr />
+
+        <h2>Manage Existing Events</h2>
+        <div id="existing-events-list">
+          <p>Loading events...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

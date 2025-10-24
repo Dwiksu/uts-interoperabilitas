@@ -1,0 +1,24 @@
+# === Virtual Environments ===
+# Abaikan folder virtual environment
+venv/
+backend/venv/
+
+# === Python Cache ===
+# Abaikan file cache Python
+__pycache__/
+*.pyc
+
+# === Database ===
+# Abaikan file database SQLite
+*.db
+*.db-journal
+backend/*.db
+
+# === IDE & OS Specific ===
+# Abaikan folder IDE (VS Code, JetBrains)
+.vscode/
+.idea/
+
+# Abaikan file sistem operasi
+.DS_Store
+Thumbs.db
